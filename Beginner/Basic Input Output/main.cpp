@@ -4,7 +4,7 @@
 int main(int argc, char* argv[], char* envp[]) {
 	std::string name;
 	//typically used for when you would create a string object with value already assigned
-	std::string str("Austin"); 
+	std::string name1("Austin"); 
 	std::cout << "Please enter your name: " << std::endl;
 	std::cin >> name;
 	std::cout << "Thank you " << name << ", hope you are having a nice day" << std::endl;
