@@ -1,4 +1,5 @@
 Difference between const pointer, pointer to const, and const pointer to const
+
 Pointer to constant - you cannot change the value of a the object the pointer is pointings at, but can change what object reference it points towards, ex:
 int x = { 4 }; 
 int y = { 5 }; 
