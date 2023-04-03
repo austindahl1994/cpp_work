@@ -9,9 +9,6 @@ public:
 		this->m_model = model;
 		this->m_year = year;
 	}
-	//Can also declare the constructor that uses the member initializer list if passed in params are bigger or more expensive
-	//Car(std::string make, std::string model, int year) : (m_make(make), m_model(model), m_year(year))
-	//private with m_make, m_model, and m_year
 	void carDetails();
 private:
 	std::string m_make;
@@ -30,5 +27,16 @@ int main(int argc, char* argv[], char* envp[]) {
 	Car* pointerCar = new Car("testModel", "testMake", 2023);
 	pointerCar->carDetails();
 	delete pointerCar;
+	pointerCar = nullptr;
+	Animal lion("Ted", 5);
+	Dog* dogPtr = new Dog("Goldie", 3, "Golden Retriever");
+	std::cout << "The lions age and name are: " << lion.getName() << " " << lion.getAge() << std::endl;
+	lion.setAge(lion.getAge() + 1);
+	std::cout << "The lion had a birthday and is now: " << lion.getAge() << " years old!" << std::endl;
+	std::cout << "The dog's name is: " << dogPtr->getName() << std::endl;
+	std::cout << "The dog's age is: " << dogPtr->getAge() << std::endl;
+	std::cout << "The dog's breed is: " << dogPtr->getBreed() << std::endl;
+	delete dogPtr;
+	dogPtr = nullptr;
 	return 0;
 }
